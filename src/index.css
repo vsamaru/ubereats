@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import "./components/header/header.css";
+@import "./components/search/search.css";
+@import "./components/delivery-terms/delivery-terms.css";
+@import "./components/authorization-options/authorization-options.css";
+@import "./components/restaurant-card/restaurant-card.css";
+@import "./components/footer/footer.css";
+@import "components/restaurant-page/restaurant-preview/restaurant-preview.css";
+@import "components/restaurant-page/nav-menu/nav-menu.css";
+@import "components/restaurant-page/restaurant-menu/restaurant-menu.css";
+@import "components/restaurant-page/product-card/product-card.css";
+@import "components/restaurant-page/restaurant-page.css";
+
+html {
+  scroll-behavior: smooth;
+  --main_font: "Roboto", sans-serif;
+  --font_black: #1d1d1d;
+  --background_black: #262626;
+  --white: #fff;
+  --font_grey: #626262;
+  --border_grey: #e0e0e0;
+  --border_light_grey: rgba(117, 117, 117, 0.2);
+  --background_lightghrey: #ddd;
+  --border_dark_grey: #757575;
+  --font-green: #327430;
+}
+
+body {
+  margin: 0;
+}
