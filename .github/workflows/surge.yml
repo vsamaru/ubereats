@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-      - name: Deploy to 6o.surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: '6o.surge.sh'
