@@ -9,17 +9,16 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
+
+    "g": "git add . && git commit -m \"first commit\" && git push -u origin main -f",
+    "su": "surge publish ./build --domain https://o6.surge.sh",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && yarn g",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
+   
     "rename-index": "node -e \"require('fs').rename('./build/index.html', './build/200.html', (err) => { console.log(err ? err : 'File renamed!') })\"",
     "predeploy": "npm run build && npm run rename-index",
-    "deploy": "surge --project ./build --domain http://uber-eats-dimavasilenko.surge.sh/",
-    "format": "prettier --write \"src/**/*.{js,jsx,css}\""
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "deploy": "surge --project ./build --domain http://o6.surge.sh/"
   },
   "browserslist": {
     "production": [
@@ -34,19 +33,6 @@
     ]
   },
   "devDependencies": {
-    "prettier": "1.18.2",
     "surge": "^0.21.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run deploy"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,css}": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }

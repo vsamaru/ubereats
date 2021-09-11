@@ -1,21 +1,16 @@
-name: 'Publish to surge.sh'
-description: 'Publish to surge.sh'
-branding:
-  icon: 'upload-cloud'
-  color: 'purple'
-inputs:
-  domain:  # id of input
-    description: 'your surge.sh domain to deploy'
-    required: true
-  login:
-    description: 'surge.sh login'
-    required: true
-  token:
-    description: 'surge.sh token, generate it with `surge token` command'
-    required: true
-  project:
-    description: 'your project path'
-    default: '.'
-runs:
-  using: 'node12'
-  main: 'index.js'
+name: My workflow
+
+on: push
+
+jobs:
+  my-job:
+    name: My job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to o6.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'o6.surge.sh'
+          project: './build'
+          login: vsamaru@gmail.com
+          token: 89b7747249620a5492699aa660ae0f8e
