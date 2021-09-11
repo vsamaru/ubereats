@@ -16,6 +16,6 @@ jobs:
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: '6o.surge.sh'
-          project: '.'
+          project: './build'
           login: vsamaru@gmail.com
           token: 89b7747249620a5492699aa660ae0f8e
