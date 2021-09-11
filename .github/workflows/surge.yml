@@ -1,0 +1,16 @@
+name: My workflow
+
+on: push
+
+jobs:
+  my-job:
+    name: My job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to 6o.surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: '6o.surge.sh'
+          project: '.'
+          login: vsamaru@gmail.com
+          token: 89b7747249620a5492699aa660ae0f8e
