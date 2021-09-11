@@ -12,7 +12,7 @@
     "g": "git add . && git commit -m \"first commit\" && git push -u origin main -f",
     "su": "surge publish ./build --domain https://o6.surge.sh",
     "start": "react-scripts start",
-    "build": "react-scripts build && yarn g",
+    "build": "react-scripts build && yarn su",
     "test": "react-scripts test",
    
     "rename-index": "node -e \"require('fs').rename('./build/index.html', './build/200.html', (err) => { console.log(err ? err : 'File renamed!') })\"",
